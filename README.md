@@ -68,4 +68,30 @@ root
 root [0]
 ```
 
+## Delphes installation
 
+- Get the Delphes code and make it:
+```bash
+wget http://cp3.irmp.ucl.ac.be/downloads/Delphes-3.5.0.tar.gz
+tar -zxf Delphes-3.5.0.tar.gz
+cd Delphes-3.5.0
+make
+```
+
+- But we don't just want the vanilla Delphes, we need to configure it with Pythia8. So open your `.bashrc` profile again and add the following lines (replace 8xxx with your version, and the correct path):
+```bash
+export PYTHIA8=/path/to/pythia8xxx
+export PYTHIA8DATA=$PYTHIA8/share/Pythia8/xmldoc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PYTHIA8/lib
+export PATH=$PATH:$PYTHIA8/bin
+```
+- Then go to the `Delphes-3.5.0` directory and make again with the flag:
+```bash
+make HAS_PYTHIA8=true
+```
+
+- Check if you get the `DelphesPythia8` executable in the directory after this. 
+- We would also like to have the `EventDisplay` feature of Delphes. So, run this:
+```bash
+make -j display
+```
