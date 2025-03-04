@@ -78,6 +78,7 @@ cd Delphes-3.5.0
 make
 ```
 
+- Alternatively, you can get the code from the [Delphes GitHub.](https://github.com/delphes/delphes)
 - But we don't just want the vanilla Delphes, we need to configure it with Pythia8. So open your `.bashrc` profile again and add the following lines (replace 8xxx with your version, and the correct path):
 ```bash
 export PYTHIA8=/path/to/pythia8xxx
