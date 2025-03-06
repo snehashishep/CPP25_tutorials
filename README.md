@@ -28,6 +28,11 @@ make
 
 ## ROOT installation
 
+- First, install these dependencies for Ubuntu. If you have other OS, please look up how to install them.
+```bash
+sudo apt-get install libx11-dev libxpm-dev libxext-dev libxft-dev lib32z1-dev libtbb-dev libftgl-dev libgl2ps-dev
+```
+
 - For linux, it is preferable to not use the latest ROOT version. So, download the ROOT binaries corresponding to your linux version from [here, for version 6.30.](https://root.cern/releases/release-63008/)
 - Untar it in your Projects directory and source it:
 ```bash
